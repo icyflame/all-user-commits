@@ -9,16 +9,27 @@
   </head>
   <body>
     <div class="jumbotron">
-      <h1 id="header">Hello!</h1>
+      <h1 id="header">Hello! Enter your username to see all your repos on GitHub.</h1>
     </div>
-    <form id="username">
-      <input id="username-val" class="form-control" type="text" placeholder="Enter your GitHub username here">
-      <br>
-      <input type="submit" class="btn btn-lg btn-success" value="Submit">
-    </form>
+    <div class="container-fluid">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <form id="username">
+          <input id="username-val" class="form-control" type="text" placeholder="Enter your GitHub username here" autofocus>
+          <br>
+          <input type="submit" class="btn btn-lg btn-success" value="Submit">
+        </form>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+
     <table class="placeholder table table-striped">
 
     </table>
+    <div class="footer">
+      <hr>
+      Built with <i class="fa fa-heart"></i> by <a href="https://github.com/icyflame">@icyflame</a>
+    </div>
     <script src="vendor/jquery/jquery.min.js" charset="utf-8"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
     <script src="bundle.js" charset="utf-8"></script>

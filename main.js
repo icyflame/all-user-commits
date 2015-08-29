@@ -22,7 +22,7 @@ function group_into (object, num) {
   var num_rows = parseInt(object.length / num, 10);
   var grouped_obj = [];
   for (var i = 0; i < num_rows; i++) {
-    var this_row = []
+    var this_row = [];
     for (var j = 0; j < num; j++) {
       this_row.push(object[i * num + j]);
     }
