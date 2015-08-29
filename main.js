@@ -1,6 +1,7 @@
 /* global $ */
 var REPOS_PER_LINE = 5;
 var ghrepos = require('github-repositories');
+var partitionInto = require('partition-into');
 
 function build_repos (repo_object) {
   return '<a href="' + repo_object.html_url + '">' + repo_object.name + '</a>';
@@ -18,24 +19,6 @@ function build_row (row_repos) {
   return this_row;
 }
 
-function group_into (object, num) {
-  var num_rows = parseInt(object.length / num, 10);
-  var grouped_obj = [];
-  for (var i = 0; i < num_rows; i++) {
-    var this_row = [];
-    for (var j = 0; j < num; j++) {
-      this_row.push(object[i * num + j]);
-    }
-    grouped_obj.push(this_row);
-  }
-  var last_row = [];
-  for (var k = num_rows * num; k < object.length; k++) {
-    last_row.push(object[k]);
-  }
-  grouped_obj.push(last_row);
-  return grouped_obj;
-}
-
 function find_repos (username) {
   ghrepos(username, function (err, body) {
     if (err) {
@@ -46,7 +29,7 @@ function find_repos (username) {
       html_strings.push(build_repos(body[i]));
     }
 
-    var rows = group_into(html_strings, 5);
+    var rows = partitionInto(html_strings, 5);
     for (i = 0; i < rows.length; i++) {
       $('.placeholder').html($('.placeholder').html() + build_row(rows[i]));
     }

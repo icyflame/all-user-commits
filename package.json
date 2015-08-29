@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "github-repositories": "^1.1.2",
+    "partition-into": "^1.0.0",
     "request-json": "^0.5.3"
   }
 }
