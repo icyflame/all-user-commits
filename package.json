@@ -1,0 +1,15 @@
+{
+  "name": "all-user-commits",
+  "version": "0.0.1",
+  "description": "Display an HTML page consisting of all of a user's commits on GitHub",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Siddharth Kannan <kannan.siddharth12@gmail.com> (http://icyflame.github.io)",
+  "license": "MIT",
+  "dependencies": {
+    "github-repositories": "^1.1.2",
+    "request-json": "^0.5.3"
+  }
+}

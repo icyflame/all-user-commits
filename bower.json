@@ -1,0 +1,15 @@
+{
+  "name": "all-user-commits",
+  "version": "0.0.1",
+  "authors": [
+    "Siddharth Kannan <kannan.siddharth12@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
