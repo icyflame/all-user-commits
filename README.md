@@ -1,6 +1,6 @@
 # all-user-commits
 
-> See the commit hashes of every commit has ever pushed to GitHub
+> See the commit hashes of every commit a user has ever pushed to GitHub
 
 **Unfinished** I am still working to get this repository to full functionality.
 
